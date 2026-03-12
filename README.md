@@ -3,4 +3,4 @@
 
 Liste des solutions : 
 - [Préparation du Labo ansible](/labo/soluce.md)
-- [Installation](Installation/soluce.md) 
+- [Installation](Instalation/soluce.md) 
