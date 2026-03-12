@@ -2,7 +2,7 @@
 [Enoncé Blog Microlinux](https://formations.microlinux.fr/ansible/installation/#installer-ansible-sur-le-control-host_1)
 
 ## Exercice 1
-Démarrez la VM ubuntu depuis le répertoire atelier-01.
+Démarrez la VM ubuntu depuis le répertoire `atelier-01`.
 ```console
 $ vagrant up ubuntu
 ```
