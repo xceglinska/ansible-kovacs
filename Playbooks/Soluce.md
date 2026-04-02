@@ -1,5 +1,5 @@
 # Un serveur Web simple
-[Enoncé Blog Microlinux](https://blog.microlinux.fr/formation-ansible-10-apache/)
+[Enoncé Blog Microlinux](https://formations.microlinux.fr/ansible/playbook/)
 
 ## Exercice 1
 Écrivez trois playbooks :
