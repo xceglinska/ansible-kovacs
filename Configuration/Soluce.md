@@ -1,5 +1,5 @@
 # Configuration de base
-[Enoncé Blog Microlinux]([https://formations.microlinux.fr/ansible/configuration/])
+[Enoncé Blog Microlinux](https://formations.microlinux.fr/ansible/configuration/)
 
 ## Exercice 1
 Démarrez les VM
