@@ -22,13 +22,15 @@ L'ajout du dépôt PPA `ppa:ansible/ansible` permet d'accéder à une version pl
 
 L'installation a été effectuée dans un environnement virtuel isolé sur Rocky Linux, permettant d'utiliser une version spécifique d'Ansible indépendamment du système.
 
-![challenge 3.png](:/921ee3c00b07423591adb61e951620e1)
+<img width="901" height="219" alt="image" src="https://github.com/user-attachments/assets/a62af88b-a8d7-428c-902f-14f76b5f614c" />
+
 
 # Authentification
 
 Test de connexion Ansible vers les trois nœuds cibles (`target01`, `target02`, `target03`) en utilisant l'utilisateur `vagrant` et le module `ping`.
 
-![pingtarget.png](:/943965504a9e420a8fc62a7b3d3c9223)
+<img width="726" height="403" alt="image" src="https://github.com/user-attachments/assets/fdf22543-e669-42de-b2cb-dfbcce757c58" />
+
 
 # Configuration de base
 
@@ -37,110 +39,111 @@ Test de connexion Ansible vers les trois nœuds cibles (`target01`, `target02`, 
 
 Installation des paquets `tree`, `git` et `nmap` sur l'ensemble des cibles (`suse`, `debian`, `rocky`) en utilisant le module générique `package`.
 
-![idempotence1.png](:/f930758064bf479386b75c197245cef5)
+<img width="634" height="419" alt="image" src="https://github.com/user-attachments/assets/a4818468-c66c-474f-9c40-7634ab6e75b1" />
+
 
 Suppression des paquets `tree`, `git` et `nmap` sur toutes les cibles en basculant l'état souhaité sur `absent`.
 
-![idempotence2.png](:/dc6c1ea694ca4e94acbd50363dbc520e)
+<img width="786" height="375" alt="image" src="https://github.com/user-attachments/assets/1aa1da59-b267-496f-9ed5-0809f498e8d7" />
 
 Transfert du fichier `/etc/fstab` depuis le nœud de contrôle vers les nœuds cibles sous le nom `/tmp/test3.txt`.
 
-![idempotence3.png](:/0d216fdf50e24a228b8e86c8d64f2e06)
+<img width="907" height="787" alt="image" src="https://github.com/user-attachments/assets/2b63ff24-d04b-44d8-b0f3-b51b3540ae6b" />
 
 Suppression du fichier `/tmp/test3.txt` sur l'ensemble des cibles en utilisant le module `file` avec l'état `absent`.
 
-![idempotence4.png](:/9e4fe595795649ec923ae1ceed60ef17)
+<img width="728" height="284" alt="image" src="https://github.com/user-attachments/assets/2cbed476-80d5-41ea-8af1-017896639225" />
 
 Exécution de la commande système `df -h /` via le module par défaut `command` pour vérifier l'occupation de la partition racine sur toutes les cibles.
 
 Statut CHANGED : Bien qu'il s'agisse d'une commande de lecture seule, Ansible retourne CHANGED car il a exécuté un binaire arbitraire sur le système distant et ne peut pas garantir que l'état de la machine n'a pas été modifié.
 
-![idempotence5.png](:/124e1e4c44784e78b368b352a0f98832)
+<img width="593" height="186" alt="image" src="https://github.com/user-attachments/assets/36ee0362-d272-4559-a394-2530bdaec61c" />
 
 # Un serveur web simple
 
 Un premier playbook apache-debian.yml qui installe Apache sur l'hôte debian avec une page personnalisée Apache web server running on Debian Linux:
 
-![apachedebian.png](:/fbf55e51701f4209b2632ee313b28017)
+<img width="605" height="696" alt="image" src="https://github.com/user-attachments/assets/22212cb3-51b3-40d2-a914-72be3681ffd0" />
 
 Un deuxième playbook apache-rocky.yml qui installe Apache sur l'hôte rocky avec une page personnalisée Apache web server running on Rocky Linux.
 
-![apacherocky.png](:/1024fa7c928042e88b77e0acc0af71d0)
+<img width="593" height="641" alt="image" src="https://github.com/user-attachments/assets/bfe99e8f-93d8-4c8a-929d-96488a38e601" />
 
 Un troisième playbook apache-suse.yml qui installe Apache sur l'hôte suse avec une page personnalisée Apache web server running on SUSE Linux.
 
-![apachesuse.png](:/84df057b7b4340979be493a4949d88df)
+<img width="571" height="620" alt="image" src="https://github.com/user-attachments/assets/7f9286fb-a3aa-4772-8c8e-35f57443c457" />
 
 # Les handlers
 
 Rédaction d'un playbook `chrony.yml` pour automatiser l'installation, la configuration et la gestion du service NTP sur l'ensemble des hôtes.
 
-![chrony.png](:/e5a8ed8288d844b699c93c4b491a71cb)
+<img width="507" height="747" alt="image" src="https://github.com/user-attachments/assets/2b7f9310-7034-4a80-8241-fbe2ce0e7504" />
 
 # Les variables
 
 Rédaction du playbook `myvars1.yml` pour démontrer la définition et l'appel de variables simples au sein d'un Play.
 
-![myvars1.png](:/4827f17bb7e84da6ba71437f6be0d547)
+<img width="498" height="353" alt="image" src="https://github.com/user-attachments/assets/7b071fa5-3759-4c5a-9457-0306ca657040" />
 
 Test de la priorité des variables en utilisant l'option `-e` (extra vars) pour surcharger les valeurs définies dans le playbook `myvars1.yml`.
 
-![myvars1extravars.png](:/c8850da5bf874885bdc4e03e2ab42752)
+<img width="1063" height="303" alt="image" src="https://github.com/user-attachments/assets/b5b662fe-e982-4569-8f23-cf32b7faf30c" />
 
 Rédaction du playbook `myvars2.yml` utilisant le module `set_fact` pour définir des variables de manière dynamique durant l'exécution des tâches.
 
-![myvars2.png](:/caa17841383f42e7be56f12e5729a777)
+<img width="492" height="366" alt="image" src="https://github.com/user-attachments/assets/e6b87bdc-968f-47ad-b53b-2e077f41b78f" />
 
 Test de la priorité des *extra vars* sur les variables définies dynamiquement avec `set_fact` dans le playbook `myvars2.yml`.
 
-![myvars2extravars.png](:/11adc1859f6d419a9f1ae760fbf79c3c)
+<img width="1048" height="354" alt="image" src="https://github.com/user-attachments/assets/09aa84ad-4711-4bf5-8fc1-d843169b3c0a" />
 
 Rédaction du playbook `myvars3.yml` et configuration des valeurs par défaut via l'arborescence des variables d'inventaire. Pour répondre à l'énoncé, les variables sont définies dans `group_vars/all.yml` afin d'être appliquées à tous les hôtes.
 
-![myvars3.png](:/9660884e4f3144c086e101b06a242ee5)
-![myvars3result.png](:/0c0742dbc6f44f029e03e3ff288c0523)
+<img width="434" height="268" alt="image" src="https://github.com/user-attachments/assets/5610a359-2ae0-4cf7-9834-5973cc964067" />
+<img width="1033" height="294" alt="image" src="https://github.com/user-attachments/assets/df86bcb0-0282-4290-9469-b0b929425aa0" />
 
 Pour surcharger les valeurs par défaut (définies précédemment dans `group_vars/all.yml`) spécifiquement pour l'hôte `target02`, on utilise le répertoire `host_vars`.
 
-![myvars3target02.png](:/2472670234a84a77883efecc6f043689)
+<img width="204" height="84" alt="image" src="https://github.com/user-attachments/assets/d930e2cc-6a2a-4819-b1d9-e1330edffebc" />
 
 Rédaction du playbook `display_users.yml` utilisant la directive `vars_prompt` pour définir les variables `user` et `password` avec leurs valeurs par défaut, tout en activant l'option `private: true` pour masquer la saisie du mot de passe.
 
-![display_users.png](:/f9025f66a17645f7a126096fd6efdf1e)
+<img width="805" height="400" alt="image" src="https://github.com/user-attachments/assets/f05580bc-9aab-43af-92b8-6bf76cf56222" />
 
 # Les variables enregistrées
 
 Exécution du playbook `kernel.yml` sur les différents hôtes cibles (`debian`, `rocky`, `suse`), illustrant la récupération des informations système via la commande `uname -a` et leur affichage détaillé dans la console grâce au module `debug`.
 
-![kernelyml.png](:/b06a76edf2bd4180a19cfd45549551ce)
-![variable_enregistre1.png](:/f9c43add4fa24fb2b749aa1d0560f833)
+<img width="528" height="255" alt="image" src="https://github.com/user-attachments/assets/8888eea8-275f-40bf-a765-b5c1acba3a9c" />
+<img width="900" height="525" alt="image" src="https://github.com/user-attachments/assets/5710d76c-412b-467e-8820-b93c76cab760" />
 
 Exécution du playbook `kernel2.yml` démontrant l'utilisation du paramètre `var` du module `debug` pour afficher directement le contenu de la variable `uname_output.stdout`, offrant une structure de sortie au format JSON pour les informations du noyau.
 
-![kernel2yml.png](:/498859904afa4c87852df3bccd4afde5)
-![var_enregistre2.png](:/4cce9ec8b0234c4985e1d6085c7f0659)
+<img width="508" height="252" alt="image" src="https://github.com/user-attachments/assets/741e735e-ac78-45ce-b16c-4f08e422d6e2" />
+<img width="901" height="533" alt="image" src="https://github.com/user-attachments/assets/52df95e7-037a-474c-a38d-9c871de9f268" />
 
 Lancement du playbook `packages.yml` ciblant les hôtes `rocky` et `suse` pour exécuter la commande de comptage des paquets RPM et afficher le résultat formaté via un message de debug.
 
-![packagesyml.png](:/ec594bf9752c40819f98c004cb9980ac)
-![var_enregistre3.png](:/d2844abe30a54c6c9661ed5847bb67b6)
+<img width="768" height="257" alt="image" src="https://github.com/user-attachments/assets/d4b1dfe8-ee35-4568-b988-84ed6d026beb" />
+<img width="896" height="379" alt="image" src="https://github.com/user-attachments/assets/b6957f04-5b16-4b7e-9664-7bf03f2b015c" />
 
 # Facts et variables implicites
 
 Définition du playbook `pkg-info.yml` exploitant la variable de fact `ansible_pkg_mgr` pour identifier automatiquement le gestionnaire de paquets (`apt`, `dnf` ou `zypper`) propre à chaque distribution.
 
-![pkg-infoyml.png](:/9333b089f41648d6b29491b5781da47a)
-![pkginforesult.png](:/0d57ccf08a7246b5ab6a6e2fbdf4766b)
+<img width="744" height="185" alt="image" src="https://github.com/user-attachments/assets/db452d49-b198-48e2-86df-02bcfce5dc1c" />
+<img width="899" height="478" alt="image" src="https://github.com/user-attachments/assets/91dbc15b-1d17-4ab4-a045-d1426469ed08" />
 
 `python-info.yml` pour afficher la version de Python installée:
 
-![python-infoyml.png](:/7b5dfe27943744c197241cccb5f7f37a)
-![python-inforesult.png](:/a6bf80f5c72a4d75824dd2e683db3927)
+<img width="822" height="184" alt="image" src="https://github.com/user-attachments/assets/3cde4f8c-ea6d-49e6-83ba-3cd3e2cf78b0" />
+<img width="903" height="479" alt="image" src="https://github.com/user-attachments/assets/0a19ccf3-7512-4764-aee9-b0696d19c9a8" />
 
 `dns-info.yml` pour afficher le(s) serveur(s) DNS utilisé(s)
 
-![dns-infoyml.png](:/d006e9bca4164480a57261b684d6aeb2)
-![dns-inforesult.png](:/903a5522a60f4f4c961a5692c38bef5a)
+<img width="865" height="197" alt="image" src="https://github.com/user-attachments/assets/1535af87-6e0f-4dd9-8136-72432c41d3f4" />
+<img width="898" height="488" alt="image" src="https://github.com/user-attachments/assets/045d2ef7-2fa0-4433-ab8e-2ded1ca076d3" />
 
 # Cibles hétérogènes
 
