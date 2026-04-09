@@ -2,7 +2,8 @@
 
 **Challenge n°1 :**
 
-![challenge 1.png](:/8acfd5db71e741beb8d1bc971a27a3ed)
+!<img width="903" height="141" alt="image" src="https://github.com/user-attachments/assets/e612fd0f-033b-4f0f-a30b-980c08e34422" />
+
 
 
 L'exécution de la commande ansible --version confirme que le paquet a été correctement installé sur la VM.
@@ -14,7 +15,8 @@ L'exécution de la commande ansible --version confirme que le paquet a été cor
 
 L'ajout du dépôt PPA `ppa:ansible/ansible` permet d'accéder à une version plus récente d'Ansible.
 
-![challenge 2.png](:/a91503dc4f7a41e594be524d19483d9c)
+<img width="888" height="202" alt="image" src="https://github.com/user-attachments/assets/975b192a-3893-4e6b-a407-58b47311a8d0" />
+
 
 **Challenge n°3 :** 
 
